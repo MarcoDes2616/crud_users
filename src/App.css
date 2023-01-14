@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 :root{
-  --PrimaryColorD: #d04343;
+  --PrimaryColorD: #6597e1;
   --DivideColor: #dfdede;
   --PrimaryText: #212121;
   --TextIcon: #FFFFFF;
-  --PrimaryColorL: #FFCDD2;
+  --PrimaryColorL: #c9d3e3;
 }
 body{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -21,7 +21,7 @@ body{
 }
 .list__users{
   width: 100%;
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,7 +239,7 @@ input{
   filter: drop-shadow(0px 0px 2px rgb(168, 168, 167));
   border: none;
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.738);
+  color: var(--PrimaryText);
   font-weight: 800;
 }
 footer{
