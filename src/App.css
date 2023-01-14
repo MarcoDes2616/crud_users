@@ -5,7 +5,7 @@
 }
 :root{
   --PrimaryColorD: #6597e1;
-  --DivideColor: #dfdede;
+  --DivideColor: #f0eeee;
   --PrimaryText: #212121;
   --TextIcon: #FFFFFF;
   --PrimaryColorL: #c9d3e3;
@@ -40,11 +40,14 @@ body{
 }
 .sumary__list button{
   height: 35px;
-  width: 110px;
+  width: 120px;
   border: none;
   background-color: var(--TextIcon);
   color: var(--PrimaryColorD);
   box-shadow: 0 0 3px 3px var(--DivideColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sumary__list button:hover{
   cursor: pointer;
@@ -101,7 +104,7 @@ body{
   border: none;
   filter: drop-shadow(1px 1px gray);
 }
-.bx-message-square-x{
+.bx-trash{
   color: red;
 }
 .container__form{
@@ -116,6 +119,10 @@ body{
   align-items: center;
   background-color: rgba(245, 245, 220, 0.65);
   z-index: 999;
+}
+.card__user .bx:hover{
+  transform: scale(1.2);
+  cursor: pointer;
 }
 .card__form{
   background-color: white;
@@ -144,11 +151,11 @@ body{
 .border__form .bx{
   color: var(--PrimaryColorD);
 }
-.bxs-x-circle{
+.border__form .bxs-x-circle{
   position: absolute;
   top: 0;
   right: 0;
-  color: rgb(226, 23, 23);
+  color: rgb(201, 4, 4);
   filter: drop-shadow(0px 0px 2px rgb(168, 168, 167));
 }
 .bxs-x-circle:hover{

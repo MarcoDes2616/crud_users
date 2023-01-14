@@ -9,7 +9,7 @@ const UserList = ({ usersList, selectUser, getForm, warning }) => {
             <h2>Lista de Usuarios</h2>
             <div className='sumary__list'>
                 <p><strong>Usuarios Existentes: </strong>{usersList.length}</p>
-                <button onClick={() => getForm()}>+ Nuevo usuario</button>
+                <button onClick={() => getForm()}><i className='bx bx-user-plus bx-sm'></i> Nuevo usuario</button>
             </div>
             <div className='container__card'>
             {orderedList.map((user) => (
@@ -22,7 +22,7 @@ const UserList = ({ usersList, selectUser, getForm, warning }) => {
                         </div>
                         <div className='user__controler'>
                             <div className='btn__edit' onClick={() => selectUser(user)}><i className='bx bxs-edit-alt bx-sm'></i></div>
-                            <div className='btn__warning' onClick={() => warning(user)}><i className='bx bx-message-square-x bx-sm'></i></div>
+                            <div className='btn__warning' onClick={() => warning(user)}><i class='bx bx-trash bx-sm'></i></div>
                         </div>
                     </div>
                 </div>
