@@ -7,8 +7,6 @@ const UserForm = ({ getUsers, userSelected, setUserSelected, closeForm }) => {
 
     const { handleSubmit, register, reset } = useForm();
     const [isVisible, setIsVisible] = useState(false)
-    
-
     const inputNull = { first_name: "", last_name: "", email: "", password: "", brithday: "" };
 
     useEffect(() => {
@@ -20,7 +18,7 @@ const UserForm = ({ getUsers, userSelected, setUserSelected, closeForm }) => {
     }, [userSelected]);
 
     const submit = (data) => {
-        warning()
+        status()
         if (userSelected) {
             axios
                 .put(`https://users-crud.academlo.tech/users/${userSelected.id}/`, data)
@@ -37,7 +35,9 @@ const UserForm = ({ getUsers, userSelected, setUserSelected, closeForm }) => {
         }
     };
 
-    const warning = () => {
+
+// ======== show create or update ========
+    const status = () => {
         setIsVisible(true)
         setTimeout(() => {
             setIsVisible(false)

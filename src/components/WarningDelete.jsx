@@ -1,6 +1,7 @@
 import React from 'react';
 
 const WarningDelete = ({userToDelete, deleteUser, alert, cancelDelete}) => {
+    
     return (
         <div>
             {alert &&

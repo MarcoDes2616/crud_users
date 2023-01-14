@@ -19,6 +19,8 @@ body{
 .App{
   width: 100%;
 }
+
+/*==========LISTADO DE USUARIOS===========*/
 .list__users{
   width: 100%;
   padding: 3rem 0 0 0;
@@ -77,7 +79,7 @@ body{
 .card__user h3{
   text-align: center;
   padding: .5rem;
-  border-bottom: 2px solid var(--PrimaryColorD);
+  border-bottom: 2px solid var(--PrimaryColorL);
 }
 .body__card{
   display: flex;
@@ -99,14 +101,18 @@ body{
   justify-content: center;
   height: 50px;
 }
-.user__controler div{
-  margin: 10px 0;
-  border: none;
-  filter: drop-shadow(1px 1px gray);
+.user__controler .bx{
+  filter: drop-shadow(1px 1px var(--PrimaryColorD));
 }
 .bx-trash{
   color: red;
 }
+.card__user .bx:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/*===========CONTENEDOR FORMULARIO===========*/
 .container__form{
   position: fixed;
   top: 0;
@@ -119,10 +125,6 @@ body{
   align-items: center;
   background-color: rgba(245, 245, 220, 0.65);
   z-index: 999;
-}
-.card__user .bx:hover{
-  transform: scale(1.2);
-  cursor: pointer;
 }
 .card__form{
   background-color: white;
@@ -156,7 +158,7 @@ body{
   top: 0;
   right: 0;
   color: rgb(201, 4, 4);
-  filter: drop-shadow(0px 0px 2px rgb(168, 168, 167));
+  filter: drop-shadow(0px 0px 2px var(--PrimaryColorD));
 }
 .bxs-x-circle:hover{
   cursor: pointer;
@@ -174,34 +176,15 @@ form{
   display: flex;
   justify-content: space-between;
 }
+.input-container_m input{
+  width: 48%;
+}
 input{
   height: 1.8rem;
-  background-color: rgb(225, 224, 223);
+  background-color: var(--DivideColor);
   border: none;
   text-align: center;
   border-radius: 5px;
-}
-.status .bx{
-  margin-top: 2rem;
-  color: rgb(118, 244, 112);
-}
-.btn__form{
-  width: 60%;
-  margin: 0 auto;
-  margin-top: 2rem;
-  background-color: rgb(170, 246, 226);
-  height: 2rem;
-  filter: drop-shadow(0px 0px 2px rgb(168, 168, 167));
-  border: none;
-  font-size: 1rem;
-  color: rgba(0, 0, 0, 0.738);
-  font-weight: 800;
-}
-.btn__form:hover{
-  cursor: pointer;
-}
-.input-container_m input{
-  width: 48%;
 }
 .input-container{
   width: 100%;
@@ -211,6 +194,30 @@ input{
 .input-container input{
   width: 92%;
 }
+.btn__form{
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  background-color: var(--PrimaryColorD);
+  height: 2rem;
+  filter: drop-shadow(0px 0px 2px rgb(168, 168, 167));
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--TextIcon);
+  font-weight: 800;
+}
+.btn__form:hover{
+  cursor: pointer;
+}
+
+/*============ ACTUALIZANDO/CREANDO===========*/
+.status .bx{
+  margin-top: 2rem;
+  color: rgb(118, 244, 112);
+}
+
+/*=========== WARNING ==================*/
 .container_name{
   width: 92%;
   display: flex;
@@ -220,18 +227,22 @@ input{
   height: 2px;
   width: 70%;
   margin: 1rem auto 2rem auto;
-  border: 1px solid rgb(170, 246, 226);
-  filter: drop-shadow(1px 1px 0px rgb(168, 168, 167));
+  border: 1px solid var(--PrimaryColorD);
+  filter: drop-shadow(1px 1px 0px var(--PrimaryColorL));
 }
 .btn__warning{
   margin-top: 2rem;
 }
+.btn__warning button:hover{
+  cursor: pointer;
+}
 .btn__cancel{
+  border-radius: 5px;
   width: 30%;
   margin: 1rem 1rem;
-  background-color: rgb(170, 246, 226);
+  background-color: var(--DivideColor);
   height: 2rem;
-  filter: drop-shadow(0px 0px 2px rgb(168, 168, 167));
+  filter: drop-shadow(0px 0px 2px var(--PrimaryText));
   border: none;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.738);
@@ -241,14 +252,16 @@ input{
   border-radius: 5px;
   width: 30%;
   margin: 1rem 1rem;
-  background-color: red;
+  background-color: rgb(245, 40, 40);
+  color: var(--TextIcon);
   height: 2rem;
-  filter: drop-shadow(0px 0px 2px rgb(168, 168, 167));
+  filter: drop-shadow(0px 0px 2px var(--PrimaryText));;
   border: none;
   font-size: 1rem;
-  color: var(--PrimaryText);
   font-weight: 800;
 }
+
+/* ===========FOOTER============*/
 footer{
   background-color: var(--DivideColor);
   height: 70px;

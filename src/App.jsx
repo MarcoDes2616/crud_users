@@ -28,23 +28,26 @@ function App() {
     setUserSelected(user)
   }
 
+//======= WINDOWS WARNING (FUNCTION TO COMPONENTS) ========
   const warning = (user) => {
     setAlert(true)
     setUserToDelete(user)
   }
+  
+//========DELETE/CANCEL DELETE(FUNCTION)====
+  const deleteUser = (user) => {
+    axios
+      .delete(`https://users-crud.academlo.tech/users/${user.id}/`)
+      .then(() => getUsers());
+
+    setAlert(false)
+  };
   const cancelDelete = () => {
     setUserToDelete(null)
     setAlert(false)
   }
 
-  const deleteUser = (user) => {
-    axios
-        .delete(`https://users-crud.academlo.tech/users/${user.id}/`)
-        .then(() => getUsers());
-
-    setAlert(false)
-};
-
+//========= OPEN/CLOSE FORM ========
   const getForm = () => {
     setForm(true)
   }
@@ -57,24 +60,24 @@ function App() {
   return (
     <div className="App">
       {form &&
-      <UsersForm
-        getUsers={getUsers}
-        userSelected={userSelected}
-        setUserSelected={setUserSelected}
-        closeForm={closeForm}
-        /> }
+        <UsersForm
+          getUsers={getUsers}
+          userSelected={userSelected}
+          setUserSelected={setUserSelected}
+          closeForm={closeForm}
+        />}
       <UserList
         usersList={usersList}
         selectUser={selectUser}
         getForm={getForm}
         warning={warning} />
-        <WarningDelete
-          alert={alert}
-          userToDelete={userToDelete}
-          deleteUser={deleteUser}
-          cancelDelete={cancelDelete}
-        />
-        <footer><p>By <strong>Marco cardenas</strong> | G-21 Academlo</p></footer>
+      <WarningDelete
+        alert={alert}
+        userToDelete={userToDelete}
+        deleteUser={deleteUser}
+        cancelDelete={cancelDelete}
+      />
+      <footer><p>By <strong>Marco cardenas</strong> | G-21 Academlo</p></footer>
     </div>
   )
 }
