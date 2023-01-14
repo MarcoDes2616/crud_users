@@ -74,6 +74,7 @@ function App() {
           deleteUser={deleteUser}
           cancelDelete={cancelDelete}
         />
+        <footer><p>By Marco cardenas | G-21 Academlo</p></footer>
     </div>
   )
 }

@@ -242,3 +242,11 @@ input{
   color: rgba(0, 0, 0, 0.738);
   font-weight: 800;
 }
+footer{
+  background-color: var(--DivideColor);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--PrimaryText);
+}
