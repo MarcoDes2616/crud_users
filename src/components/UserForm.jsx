@@ -53,7 +53,7 @@ const UserForm = ({ getUsers, userSelected, setUserSelected, closeForm }) => {
                     <i onClick={() => closeForm()} className='bx bxs-x-circle bx-md'></i>
                     <h2>Formulario de usuarios</h2>
                     {isVisible ?
-                        <div>
+                        <div className='status'>
                             <h3>{userSelected ? "Actualizando" : "Nuevo Usuario creado"}</h3>
                             <i className='bx bxs-check-circle bx-burst bx-lg' ></i>
                         </div> : 

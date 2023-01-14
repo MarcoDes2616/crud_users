@@ -3,39 +3,106 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root{
+  --PrimaryColorD: #D32F2F;
+  --DivideColor: #dfdede;
+  --PrimaryText: #212121;
+  --TextIcon: #FFFFFF;
+  --PrimaryColorL: #FFCDD2;
+}
 body{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 200;
+  color: var(--TextIcon);
+  background-color: var(--PrimaryColorD);
 }
 .App{
-  position: relative;
-  padding: 3rem;
-  background-color: rgb(170, 246, 226);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
 }
 .list__users{
+  width: 100%;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
-  width: 90%;
-  text-align: center;
+  align-items: center;
 }
-h2{
-  font-size: 2rem;
-  margin-bottom: 3rem;
+.list__users h2{
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 .sumary__list{
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 6px 6px 0 var(--DivideColor);
 }
 .sumary__list button{
-  height: 40px;
-  background-color: rgb(53, 8, 188);
+  height: 35px;
+  width: 110px;
   border: none;
-  font-weight: 800;
+  background-color: var(--TextIcon);
+  color: var(--PrimaryColorD);
+  box-shadow: 0 0 3px 3px var(--DivideColor);
+}
+.sumary__list button:hover{
+  cursor: pointer;
+  background-color: var(--PrimaryColorL);
+  color: var(--PrimaryText);
+}
+.container__card{
+  background-color: var(--TextIcon);
+  width: 100%;
+  min-height: 500px;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-evenly;
+  color: var(--PrimaryText);
+}
+.card__user{
+  width: 270px;
+  height: 200px;
+  padding: 2rem 1rem;
+  box-shadow: 0 0 5px var(--PrimaryColorD);
+  border-radius: 5px;
+  background-color: var(--DivideColor);
+}
+.card__user h3{
+  text-align: center;
   padding: .5rem;
-  color: white;
+  border-bottom: 2px solid var(--PrimaryColorD);
+}
+.body__card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin: 1rem auto;
+  font-size: .9rem;
+}
+.info__user{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.user__controler{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px;
+}
+.user__controler div{
+  margin: 10px 0;
+  border: none;
+  filter: drop-shadow(1px 1px gray);
+}
+.bx-message-square-x{
+  color: red;
 }
 .container__form{
   position: fixed;
@@ -62,7 +129,7 @@ h2{
   align-items: center;
 }
 .border__form{
-  border: 2px solid rgb(170, 246, 226);
+  border: 2px solid var(--PrimaryColorD);
   width: 98%;
   height: 98%;
   padding: 3rem 1rem;
@@ -72,10 +139,10 @@ h2{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: var(--PrimaryText);
 }
-.bx{
-  color:rgb(170, 246, 226);
-  filter: drop-shadow(1px 1px gray);
+.border__form .bx{
+  color: var(--PrimaryColorD);
 }
 .bxs-x-circle{
   position: absolute;
@@ -99,7 +166,6 @@ form{
 .input-container_m{
   display: flex;
   justify-content: space-between;
-
 }
 input{
   height: 1.8rem;
@@ -108,8 +174,12 @@ input{
   text-align: center;
   border-radius: 5px;
 }
+.status .bx{
+  margin-top: 2rem;
+  color: rgb(118, 244, 112);
+}
 .btn__form{
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   margin-top: 2rem;
   background-color: rgb(170, 246, 226);
@@ -150,7 +220,7 @@ input{
   margin-top: 2rem;
 }
 .btn__cancel{
-  width: 20%;
+  width: 30%;
   margin: 1rem 1rem;
   background-color: rgb(170, 246, 226);
   height: 2rem;
@@ -162,7 +232,7 @@ input{
 }
 .btn__delete{
   border-radius: 5px;
-  width: 20%;
+  width: 30%;
   margin: 1rem 1rem;
   background-color: red;
   height: 2rem;
@@ -171,44 +241,4 @@ input{
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.738);
   font-weight: 800;
-}
-.card__user{
-  width: 250px;
-  height: 200px;
-  padding: 2rem 1rem;
-  box-shadow: 0 0 5px gray;
-  border-radius: 5px;
-  background-color: white;
-}
-.card__user h3{
-  text-align: center;
-  padding: .5rem;
-  border-bottom: 2px solid rgb(170, 246, 226);
-}
-.body__card{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-  margin: 1rem auto;
-  font-size: .9rem;
-}
-.info__user{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.user__controler{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50px;
-}
-.user__controler div{
-  margin: 10px 0;
-  border: none;
-}
-.bx-message-square-x{
-  color: red;
 }
