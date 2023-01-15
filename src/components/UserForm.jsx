@@ -36,7 +36,7 @@ const UserForm = ({ getUsers, userSelected, setUserSelected, closeForm }) => {
     };
 
 
-// ======== show create or update ========
+// ======== show status: create or update ========
     const status = () => {
         setIsVisible(true)
         setTimeout(() => {
@@ -61,21 +61,21 @@ const UserForm = ({ getUsers, userSelected, setUserSelected, closeForm }) => {
                         <div className="input-container_m">
                             <label htmlFor="first_name"><i className='bx bx-user bx-sm'></i></label>
                             <div className='container_name'>
-                                <input type="text" id="first_name" placeholder='Nombre' {...register("first_name")} />
-                                <input type="text" id="last_name" placeholder='Apellido' {...register("last_name")} />
+                                <input required type="text" id="first_name" placeholder='Nombre' {...register("first_name")} />
+                                <input required type="text" id="last_name" placeholder='Apellido' {...register("last_name")} />
                             </div>
                         </div>
                         <div className="input-container">
                             <label htmlFor="email"><i className='bx bx-envelope bx-sm'></i></label>
-                            <input type="email" id="email" placeholder='Correo electrónico' {...register("email")} />
+                            <input required type="email" id="email" placeholder='Correo electrónico' {...register("email")} />
                         </div>
                         <div className="input-container">
                             <label htmlFor="password"><i className='bx bx-lock-alt bx-sm' ></i></label>
-                            <input type="password" id="password" placeholder='Contraseña' {...register("password")} />
+                            <input required type="password" id="password" placeholder='Contraseña' {...register("password")} />
                         </div>
                         <div className="input-container">
                             <label htmlFor="birthday"><i className='bx bx-cake bx-sm'></i></label>
-                            <input type="date" id="birthday" {...register("birthday")} />
+                            <input required type="date" id="birthday" {...register("birthday")} />
                         </div>
                         <button className='btn__form'>{userSelected ? "Actualizar usuario" : "Nuevo usuario"}</button>
                     </form>
