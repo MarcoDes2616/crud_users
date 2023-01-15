@@ -22,7 +22,7 @@ const UserList = ({ usersList, selectUser, getForm, warning }) => {
                         </div>
                         <div className='user__controler'>
                             <div className='btn__edit' onClick={() => selectUser(user)}><i className='bx bxs-edit-alt bx-sm'></i></div>
-                            <div className='btn__warning' onClick={() => warning(user)}><i class='bx bx-trash bx-sm'></i></div>
+                            <div className='btn__warning' onClick={() => warning(user)}><i className='bx bx-trash bx-sm'></i></div>
                         </div>
                     </div>
                 </div>
